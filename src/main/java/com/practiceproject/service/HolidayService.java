@@ -35,7 +35,6 @@ public class HolidayService implements IHolidayService {
 
         log.info("Argentinian holidays: " + holidays);
 
-        // TODO: invoke kafka producer
         for (HolidayDTO dto : holidays) {
             holidayEventProducer.sendHolidayEvent(dto);
         }
