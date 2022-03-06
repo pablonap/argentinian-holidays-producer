@@ -12,7 +12,7 @@
 	<artifactId>argentinian-holidays-producer</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>argentinian-holidays-producer</name>
-	<description>library producer of argentinian holidays into kafka topic</description>
+	<description>Publish argentinian holidays into a kafka topic</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
