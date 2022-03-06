@@ -12,9 +12,8 @@ import java.util.List;
  */
 public interface IHolidayService {
     /**
-     * Return all argentinian holidays
+     * Publish all argentinian holidays in a broker.
      *
-     * @return {@code List<HolidayDTO>}
      */
-    List<HolidayDTO> findAll();
+    void publishHolidays();
 }

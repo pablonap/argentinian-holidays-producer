@@ -3,6 +3,7 @@ package com.practiceproject.service;
 import com.practiceproject.dto.HolidayDTO;
 import com.practiceproject.repository.HolidayRepository;
 import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
@@ -18,14 +19,18 @@ import java.util.stream.Collectors;
  */
 @Service
 @AllArgsConstructor
+@Slf4j
 public class HolidayService implements IHolidayService {
     private final HolidayRepository repository;
     private ModelMapper mapper;
 
-    public List<HolidayDTO> findAll() {
-        return repository.findAll()
+    public void publishHolidays() {
+        List<HolidayDTO> holidays = repository.findAll()
                 .stream()
                 .map(a -> mapper.map(a, HolidayDTO.class))
                 .collect(Collectors.toList());
+
+        log.info("Argentinian holidays: " + holidays);
+        // TODO: invoke kafka producer
     }
 }
