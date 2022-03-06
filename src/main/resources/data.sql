@@ -1,0 +1,14 @@
+INSERT INTO holiday (name, holiday_date) VALUES ('new year', '1-1');
+INSERT INTO holiday (name, holiday_date) VALUES ('carnival', '2-28');
+INSERT INTO holiday (name, holiday_date) VALUES ('carnival', '3-1');
+INSERT INTO holiday (name, holiday_date) VALUES ('National Day of Remembrance for Truth and Justice', '3-24');
+INSERT INTO holiday (name, holiday_date) VALUES ('Veterans Day and the Fallen in the Malvinas War', '4-2');
+INSERT INTO holiday (name, holiday_date) VALUES ('Holy Friday', '4-15');
+INSERT INTO holiday (name, holiday_date) VALUES ('Labor Day', '5-1');
+INSERT INTO holiday (name, holiday_date) VALUES ('May Revolution Day', '5-25');
+INSERT INTO holiday (name, holiday_date) VALUES ('Independence day', '7-9');
+INSERT INTO holiday (name, holiday_date) VALUES ('Passage to the Immortality of Gral San Martin', '8-15');
+INSERT INTO holiday (name, holiday_date) VALUES ('Day of Respect for Cultural Diversity', '10-10');
+INSERT INTO holiday (name, holiday_date) VALUES ('National Sovereignty Day', '11-20');
+INSERT INTO holiday (name, holiday_date) VALUES ('Immaculate Conception', '12-8');
+INSERT INTO holiday (name, holiday_date) VALUES ('Christmas', '12-25');
