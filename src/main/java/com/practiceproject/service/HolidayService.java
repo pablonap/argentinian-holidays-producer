@@ -24,8 +24,8 @@ import java.util.stream.Collectors;
 @Slf4j
 public class HolidayService implements IHolidayService {
     private final HolidayRepository repository;
-    private ModelMapper mapper;
-    private HolidayEventProducer holidayEventProducer;
+    private final ModelMapper mapper;
+    private final HolidayEventProducer holidayEventProducer;
 
     public void publishHolidays() throws JsonProcessingException {
         List<HolidayDTO> holidays = repository.findAll()

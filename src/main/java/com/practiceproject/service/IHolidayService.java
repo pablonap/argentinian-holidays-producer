@@ -13,8 +13,7 @@ import java.util.List;
  */
 public interface IHolidayService {
     /**
-     * Publish all argentinian holidays in a broker.
-     *
+     * Publish all argentinian holidays.
      */
     void publishHolidays() throws JsonProcessingException;
 }
