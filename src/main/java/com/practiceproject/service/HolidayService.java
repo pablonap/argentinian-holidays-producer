@@ -1,6 +1,8 @@
 package com.practiceproject.service;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.practiceproject.dto.HolidayDTO;
+import com.practiceproject.producer.HolidayEventProducer;
 import com.practiceproject.repository.HolidayRepository;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -23,14 +25,19 @@ import java.util.stream.Collectors;
 public class HolidayService implements IHolidayService {
     private final HolidayRepository repository;
     private ModelMapper mapper;
+    private HolidayEventProducer holidayEventProducer;
 
-    public void publishHolidays() {
+    public void publishHolidays() throws JsonProcessingException {
         List<HolidayDTO> holidays = repository.findAll()
                 .stream()
                 .map(a -> mapper.map(a, HolidayDTO.class))
                 .collect(Collectors.toList());
 
         log.info("Argentinian holidays: " + holidays);
+
         // TODO: invoke kafka producer
+        for (HolidayDTO dto : holidays) {
+            holidayEventProducer.sendHolidayEvent(dto);
+        }
     }
 }

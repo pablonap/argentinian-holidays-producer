@@ -1,5 +1,6 @@
 package com.practiceproject.service;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.practiceproject.dto.HolidayDTO;
 import java.util.List;
 
@@ -15,5 +16,5 @@ public interface IHolidayService {
      * Publish all argentinian holidays in a broker.
      *
      */
-    void publishHolidays();
+    void publishHolidays() throws JsonProcessingException;
 }
