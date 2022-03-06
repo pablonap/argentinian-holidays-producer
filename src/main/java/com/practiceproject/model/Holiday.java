@@ -6,9 +6,12 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDate;
-import java.util.Date;
-
+/**
+ * The {@code Holiday} class represents the data model
+ * for an argentinian holiday.
+ *
+ * @author pablo.napoli
+ */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
