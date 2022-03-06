@@ -13,8 +13,11 @@ spring:
     show-sql: 'true'
   kafka:
     template:
-      default-topic: library-events
+      default-topic: holiday-events
     producer:
       bootstrap-servers: localhost:9092
       key-serializer: org.apache.kafka.common.serialization.LongSerializer
       value-serializer: org.apache.kafka.common.serialization.StringSerializer
+    admin:
+      properties:
+        bootstrap.servers: localhost:9092
